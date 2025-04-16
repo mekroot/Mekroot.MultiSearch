@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>MultiSearch.Library</AssemblyName>
+    <RootNamespace>MultiSearch.Library</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Managers\" />
+    <Folder Include="Models\" />
+    <Folder Include="Providers\" />
+    <Folder Include="Services\" />
+    <Folder Include="Settings\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Options">
+      <HintPath>..\..\..\..\..\..\usr\local\share\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.options\2.1.1\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="log4net.txt" />
+    <None Remove="Exceptions\SearchResponseExecption.config" />
+    <None Remove="Exceptions\SearchProviderException.config" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>MultiSearch.Web</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+    <Folder Include="logs" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="2.2.4" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.6.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MultiSearch.Library\MultiSearch.Library.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Extensions\ConfigurationServicesExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Client\angular.json" />
+    <Content Remove="Client\package-lock.json" />
+    <Content Remove="Client\package.json" />
+    <Content Remove="Client\tsconfig.json" />
+    <Content Remove="Client\tslint.json" />
+    <Content Remove="Client\src\tsconfig.app.json" />
+    <Content Remove="Client\src\tsconfig.spec.json" />
+    <Content Remove="Client\src\tslint.json" />
+    <Content Remove="wwwroot\3rdpartylicenses.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Client\.editorconfig" />
+    <None Remove="Client\.gitignore" />
+    <None Remove="Client\README.md" />
+    <None Remove="Client\src\browserslist" />
+    <None Remove="Client\src\favicon.ico" />
+    <None Remove="Client\src\index.html" />
+    <None Remove="Client\src\karma.conf.js" />
+    <None Remove="Client\src\main.ts" />
+    <None Remove="Client\src\polyfills.ts" />
+    <None Remove="Client\src\styles.css" />
+    <None Remove="Client\src\test.ts" />
+    <None Remove="Client\src\app\app.component.css" />
+    <None Remove="Client\src\app\app.component.html" />
+    <None Remove="Client\src\app\app.component.spec.ts" />
+    <None Remove="Client\src\app\app.component.ts" />
+    <None Remove="Client\src\app\app.module.ts" />
+    <None Remove="Client\src\assets\.gitkeep" />
+    <None Remove="Client\src\environments\environment.prod.ts" />
+    <None Remove="Client\src\environments\environment.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\3rdpartylicenses.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="nlog.config" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
